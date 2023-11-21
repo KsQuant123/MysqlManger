@@ -1,0 +1,165 @@
+2023-11-21 14:40:08.783 | ERROR    | fire.core:_CallAndUpdateTrace:691 - An error has been caught in function '_CallAndUpdateTrace', process 'MainProcess' (31364), thread 'MainThread' (25228):
+Traceback (most recent call last):
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_mm_update_by_table_id.py", line 30, in <module>
+    fire.Fire(main)
+    │    │    └ <function main at 0x0000027424B30670>
+    │    └ <function Fire at 0x00000274733ED160>
+    └ <module 'fire' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\site-packages\\fire\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      │     │          │     │                 │        └ 'macro_mm_update_by_table_id.py'
+                      │     │          │     │                 └ {}
+                      │     │          │     └ Namespace(completion=None, help=False, interactive=False, separator='-', trace=False, verbose=False)
+                      │     │          └ ['-title_list=[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\...
+                      │     └ <function main at 0x0000027424B30670>
+                      └ <function _Fire at 0x00000274752BA700>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+    │                           └ <function _CallAndUpdateTrace at 0x00000274752BA820>
+    └ <function main at 0x0000027424B30670>
+
+> File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                │   │          └ {}
+                │   └ ['[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807...
+                └ <function main at 0x0000027424B30670>
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_mm_update_by_table_id.py", line 21, in main
+    title_list = json.loads(title_list)
+                 │    │     └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+                 │    └ <function loads at 0x0000027473497D30>
+                 └ <module 'json' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\json\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+           │                │      └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+           │                └ <function JSONDecoder.decode at 0x00000274734975E0>
+           └ <json.decoder.JSONDecoder object at 0x00000274733EFBE0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               │    │          │      │  └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+               │    │          │      └ <built-in method match of re.Pattern object at 0x00000274734419F0>
+               │    │          └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+               │    └ <function JSONDecoder.raw_decode at 0x0000027473497670>
+               └ <json.decoder.JSONDecoder object at 0x00000274733EFBE0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+          │                                  └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+          └ <class 'json.decoder.JSONDecodeError'>
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+2023-11-21 14:41:16.885 | ERROR    | fire.core:_CallAndUpdateTrace:691 - An error has been caught in function '_CallAndUpdateTrace', process 'MainProcess' (6772), thread 'MainThread' (18836):
+Traceback (most recent call last):
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_mm_update_by_table_id.py", line 30, in <module>
+    fire.Fire(main)
+    │    │    └ <function main at 0x0000027F68AD0670>
+    │    └ <function Fire at 0x0000027F3735D160>
+    └ <module 'fire' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\site-packages\\fire\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      │     │          │     │                 │        └ 'macro_mm_update_by_table_id.py'
+                      │     │          │     │                 └ {}
+                      │     │          │     └ Namespace(completion=None, help=False, interactive=False, separator='-', trace=False, verbose=False)
+                      │     │          └ ['-title_list=[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\...
+                      │     └ <function main at 0x0000027F68AD0670>
+                      └ <function _Fire at 0x0000027F3925A700>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+    │                           └ <function _CallAndUpdateTrace at 0x0000027F3925A820>
+    └ <function main at 0x0000027F68AD0670>
+
+> File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                │   │          └ {}
+                │   └ ['[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807...
+                └ <function main at 0x0000027F68AD0670>
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_mm_update_by_table_id.py", line 21, in main
+    title_list = json.loads(title_list)
+                 │    │     └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+                 │    └ <function loads at 0x0000027F37407D30>
+                 └ <module 'json' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\json\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+           │                │      └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+           │                └ <function JSONDecoder.decode at 0x0000027F374075E0>
+           └ <json.decoder.JSONDecoder object at 0x0000027F3735FBE0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               │    │          │      │  └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+               │    │          │      └ <built-in method match of re.Pattern object at 0x0000027F373B19F0>
+               │    │          └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+               │    └ <function JSONDecoder.raw_decode at 0x0000027F37407670>
+               └ <json.decoder.JSONDecoder object at 0x0000027F3735FBE0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+          │                                  └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+          └ <class 'json.decoder.JSONDecodeError'>
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+2023-11-21 14:42:09.092 | ERROR    | fire.core:_CallAndUpdateTrace:691 - An error has been caught in function '_CallAndUpdateTrace', process 'MainProcess' (29796), thread 'MainThread' (21012):
+Traceback (most recent call last):
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_mm_update_by_table_id.py", line 30, in <module>
+    fire.Fire(main)
+    │    │    └ <function main at 0x00000175DE920670>
+    │    └ <function Fire at 0x00000175AD1BD160>
+    └ <module 'fire' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\site-packages\\fire\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      │     │          │     │                 │        └ 'macro_mm_update_by_table_id.py'
+                      │     │          │     │                 └ {}
+                      │     │          │     └ Namespace(completion=None, help=False, interactive=False, separator='-', trace=False, verbose=False)
+                      │     │          └ ['--title_list=[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\...
+                      │     └ <function main at 0x00000175DE920670>
+                      └ <function _Fire at 0x00000175AF0AA700>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+    │                           └ <function _CallAndUpdateTrace at 0x00000175AF0AA820>
+    └ <function main at 0x00000175DE920670>
+
+> File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                │   │          └ {}
+                │   └ ['[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807...
+                └ <function main at 0x00000175DE920670>
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_mm_update_by_table_id.py", line 21, in main
+    title_list = json.loads(title_list)
+                 │    │     └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+                 │    └ <function loads at 0x00000175AD267D30>
+                 └ <module 'json' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\json\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+           │                │      └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+           │                └ <function JSONDecoder.decode at 0x00000175AD2675E0>
+           └ <json.decoder.JSONDecoder object at 0x00000175AD1BFBE0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               │    │          │      │  └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+               │    │          │      └ <built-in method match of re.Pattern object at 0x00000175AD2119F0>
+               │    │          └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+               │    └ <function JSONDecoder.raw_decode at 0x00000175AD267670>
+               └ <json.decoder.JSONDecoder object at 0x00000175AD1BFBE0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+          │                                  └ '[\\u7f8e\\u56fd-GDP\\u7efc\\u5408\\u6307\\u6807, \\u7f8e\\u56fd-\\u7269\\u4ef7, \\u7f8e\\u56fd-\\u5e02\\u573a\\u6307\\u6807,...
+          └ <class 'json.decoder.JSONDecodeError'>
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)

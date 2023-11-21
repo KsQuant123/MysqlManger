@@ -1,0 +1,274 @@
+2023-11-21 14:24:44.669 | ERROR    | fire.core:_CallAndUpdateTrace:691 - An error has been caught in function '_CallAndUpdateTrace', process 'MainProcess' (12356), thread 'MainThread' (25060):
+Traceback (most recent call last):
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_fred_record_by_id.py", line 37, in <module>
+    fire.Fire(main)
+    │    │    └ <function main at 0x0000024FFFD318B0>
+    │    └ <function Fire at 0x0000024FF144C160>
+    └ <module 'fire' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\site-packages\\fire\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      │     │          │     │                 │        └ 'macro_fred_record_by_id.py'
+                      │     │          │     │                 └ {}
+                      │     │          │     └ Namespace(completion=None, help=False, interactive=False, separator='-', trace=False, verbose=False)
+                      │     │          └ ["-code_list='[BAMLH0A0HYM2EY,", 'BAMLC0A4CBBBEY,', 'DGS10,', 'PAYEMS,', 'PPIACO,', 'T10Y3M,', 'T10Y2T,', 'T30Y10,', 'DGS10,'...
+                      │     └ <function main at 0x0000024FFFD318B0>
+                      └ <function _Fire at 0x0000024FF333A700>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+    │                           └ <function _CallAndUpdateTrace at 0x0000024FF333A820>
+    └ <function main at 0x0000024FFFD318B0>
+
+> File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                │   │          └ {}
+                │   └ ["'[BAMLH0A0HYM2EY,", ('BAMLC0A4CBBBEY',)]
+                └ <function main at 0x0000024FFFD318B0>
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_fred_record_by_id.py", line 26, in main
+    code_list = json.loads(code_list)
+                │    │     └ "'[BAMLH0A0HYM2EY,"
+                │    └ <function loads at 0x0000024FF14F8D30>
+                └ <module 'json' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\json\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+           │                │      └ "'[BAMLH0A0HYM2EY,"
+           │                └ <function JSONDecoder.decode at 0x0000024FF14F85E0>
+           └ <json.decoder.JSONDecoder object at 0x0000024FF144EC10>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               │    │          │      │  └ "'[BAMLH0A0HYM2EY,"
+               │    │          │      └ <built-in method match of re.Pattern object at 0x0000024FF14A29F0>
+               │    │          └ "'[BAMLH0A0HYM2EY,"
+               │    └ <function JSONDecoder.raw_decode at 0x0000024FF14F8670>
+               └ <json.decoder.JSONDecoder object at 0x0000024FF144EC10>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+          │                                  └ "'[BAMLH0A0HYM2EY,"
+          └ <class 'json.decoder.JSONDecodeError'>
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-11-21 14:28:04.605 | ERROR    | fire.core:_CallAndUpdateTrace:691 - An error has been caught in function '_CallAndUpdateTrace', process 'MainProcess' (30792), thread 'MainThread' (28016):
+Traceback (most recent call last):
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_fred_record_by_id.py", line 37, in <module>
+    fire.Fire(main)
+    │    │    └ <function main at 0x000002227F8008B0>
+    │    └ <function Fire at 0x000002226EF1D160>
+    └ <module 'fire' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\site-packages\\fire\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      │     │          │     │                 │        └ 'macro_fred_record_by_id.py'
+                      │     │          │     │                 └ {}
+                      │     │          │     └ Namespace(completion=None, help=False, interactive=False, separator='-', trace=False, verbose=False)
+                      │     │          └ ['-code_list=[BAMLH0A0HYM2EY, BAMLC0A4CBBBEY, DGS10, PAYEMS, PPIACO, T10Y3M, T10Y2T, T30Y10, DGS10, DGS2, DGS30, DGS5, DGS3MO...
+                      │     └ <function main at 0x000002227F8008B0>
+                      └ <function _Fire at 0x0000022270E0A700>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+    │                           └ <function _CallAndUpdateTrace at 0x0000022270E0A820>
+    └ <function main at 0x000002227F8008B0>
+
+> File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                │   │          └ {}
+                │   └ [['BAMLH0A0HYM2EY', 'BAMLC0A4CBBBEY', 'DGS10', 'PAYEMS', 'PPIACO', 'T10Y3M', 'T10Y2T', 'T30Y10', 'DGS10', 'DGS2', 'DGS30', 'D...
+                └ <function main at 0x000002227F8008B0>
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_fred_record_by_id.py", line 26, in main
+    code_list = json.loads(code_list)
+                │    │     └ ['BAMLH0A0HYM2EY', 'BAMLC0A4CBBBEY', 'DGS10', 'PAYEMS', 'PPIACO', 'T10Y3M', 'T10Y2T', 'T30Y10', 'DGS10', 'DGS2', 'DGS30', 'DG...
+                │    └ <function loads at 0x000002226EFC8D30>
+                └ <module 'json' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\json\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+
+TypeError: the JSON object must be str, bytes or bytearray, not list
+2023-11-21 14:29:12.338 | ERROR    | fire.core:_CallAndUpdateTrace:691 - An error has been caught in function '_CallAndUpdateTrace', process 'MainProcess' (22740), thread 'MainThread' (13012):
+Traceback (most recent call last):
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_fred_record_by_id.py", line 37, in <module>
+    fire.Fire(main)
+    │    │    └ <function main at 0x0000022966F808B0>
+    │    └ <function Fire at 0x00000229366CD160>
+    └ <module 'fire' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\site-packages\\fire\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      │     │          │     │                 │        └ 'macro_fred_record_by_id.py'
+                      │     │          │     │                 └ {}
+                      │     │          │     └ Namespace(completion=None, help=False, interactive=False, separator='-', trace=False, verbose=False)
+                      │     │          └ ['-code_list=[BAMLH0A0HYM2EY, BAMLC0A4CBBBEY, DGS10, PAYEMS, PPIACO, T10Y3M, T10Y2T, T30Y10, DGS10, DGS2, DGS30, DGS5, DGS3MO...
+                      │     └ <function main at 0x0000022966F808B0>
+                      └ <function _Fire at 0x000002293858A700>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+    │                           └ <function _CallAndUpdateTrace at 0x000002293858A820>
+    └ <function main at 0x0000022966F808B0>
+
+> File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                │   │          └ {}
+                │   └ [['BAMLH0A0HYM2EY', 'BAMLC0A4CBBBEY', 'DGS10', 'PAYEMS', 'PPIACO', 'T10Y3M', 'T10Y2T', 'T30Y10', 'DGS10', 'DGS2', 'DGS30', 'D...
+                └ <function main at 0x0000022966F808B0>
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_fred_record_by_id.py", line 27, in main
+    code_list = json.loads(code_list)
+                │    │     └ ['BAMLH0A0HYM2EY', 'BAMLC0A4CBBBEY', 'DGS10', 'PAYEMS', 'PPIACO', 'T10Y3M', 'T10Y2T', 'T30Y10', 'DGS10', 'DGS2', 'DGS30', 'DG...
+                │    └ <function loads at 0x0000022936778D30>
+                └ <module 'json' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\json\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\json\__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+
+TypeError: the JSON object must be str, bytes or bytearray, not list
+2023-11-21 14:30:10.250 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting BAMLH0A0HYM2EY into <Model: table_macro_fs_data>
+2023-11-21 14:30:12.154 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting BAMLC0A4CBBBEY into <Model: table_macro_fs_data>
+2023-11-21 14:30:15.590 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS10 into <Model: table_macro_fs_data>
+2023-11-21 14:30:16.433 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting PAYEMS into <Model: table_macro_fs_data>
+2023-11-21 14:30:17.294 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting PPIACO into <Model: table_macro_fs_data>
+2023-11-21 14:30:19.730 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting T10Y3M into <Model: table_macro_fs_data>
+2023-11-21 14:30:20.271 | ERROR    | fire.core:_CallAndUpdateTrace:691 - An error has been caught in function '_CallAndUpdateTrace', process 'MainProcess' (6756), thread 'MainThread' (31708):
+Traceback (most recent call last):
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fredapi\fred.py", line 64, in __fetch_data
+    response = urlopen(url)
+               │       └ 'https://api.stlouisfed.org/fred/series?series_id=T10Y2T&api_key=4dd97a659913639fbad81046ce9ea8b3'
+               └ <function urlopen at 0x0000027B27911550>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+           │      │    │    │     └ <object object at 0x0000027B7575D1F0>
+           │      │    │    └ None
+           │      │    └ 'https://api.stlouisfed.org/fred/series?series_id=T10Y2T&api_key=4dd97a659913639fbad81046ce9ea8b3'
+           │      └ <function OpenerDirector.open at 0x0000027B279E2E50>
+           └ <urllib.request.OpenerDirector object at 0x0000027B291E4F10>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+               │    │    └ <http.client.HTTPResponse object at 0x0000027B753B9790>
+               │    └ <urllib.request.Request object at 0x0000027B775F6580>
+               └ <bound method HTTPErrorProcessor.http_response of <urllib.request.HTTPErrorProcessor object at 0x0000027B29238820>>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+               │    │      └ <function OpenerDirector.error at 0x0000027B279E2F70>
+               │    └ <urllib.request.OpenerDirector object at 0x0000027B291E4F10>
+               └ <urllib.request.HTTPErrorProcessor object at 0x0000027B29238820>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+           │    │            └ ({'default': [<urllib.request.HTTPDefaultErrorHandler object at 0x0000027B291E4DC0>], 301: [<urllib.request.HTTPRedirectHandl...
+           │    └ <function OpenerDirector._call_chain at 0x0000027B279E2DC0>
+           └ <urllib.request.OpenerDirector object at 0x0000027B291E4F10>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+             │     └ (<urllib.request.Request object at 0x0000027B775F6580>, <http.client.HTTPResponse object at 0x0000027B753B9790>, 400, 'Bad Re...
+             └ <bound method HTTPDefaultErrorHandler.http_error_default of <urllib.request.HTTPDefaultErrorHandler object at 0x0000027B291E4...
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+          │         │   │         │     │    │     └ <http.client.HTTPResponse object at 0x0000027B753B9790>
+          │         │   │         │     │    └ <http.client.HTTPMessage object at 0x0000027B298CD190>
+          │         │   │         │     └ 'Bad Request'
+          │         │   │         └ 400
+          │         │   └ <property object at 0x0000027B279374A0>
+          │         └ <urllib.request.Request object at 0x0000027B775F6580>
+          └ <class 'urllib.error.HTTPError'>
+
+urllib.error.HTTPError: HTTP Error 400: Bad Request
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_fred_record_by_id.py", line 35, in <module>
+    fire.Fire(main)
+    │    │    └ <function main at 0x0000027B7FF008B0>
+    │    └ <function Fire at 0x0000027B7563D160>
+    └ <module 'fire' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\site-packages\\fire\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+                      │     │          │     │                 │        └ 'macro_fred_record_by_id.py'
+                      │     │          │     │                 └ {}
+                      │     │          │     └ Namespace(completion=None, help=False, interactive=False, separator='-', trace=False, verbose=False)
+                      │     │          └ ['-code_list=[BAMLH0A0HYM2EY, BAMLC0A4CBBBEY, DGS10, PAYEMS, PPIACO, T10Y3M, T10Y2T, T30Y10, DGS10, DGS2, DGS30, DGS5, DGS3MO...
+                      │     └ <function main at 0x0000027B7FF008B0>
+                      └ <function _Fire at 0x0000027B7750A700>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 475, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+    │                           └ <function _CallAndUpdateTrace at 0x0000027B7750A820>
+    └ <function main at 0x0000027B7FF008B0>
+
+> File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fire\core.py", line 691, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+                │   │          └ {}
+                │   └ [['BAMLH0A0HYM2EY', 'BAMLC0A4CBBBEY', 'DGS10', 'PAYEMS', 'PPIACO', 'T10Y3M', 'T10Y2T', 'T30Y10', 'DGS10', 'DGS2', 'DGS30', 'D...
+                └ <function main at 0x0000027B7FF008B0>
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\ExecutableFile\Script\macro\macro_fred_record_by_id.py", line 28, in main
+    update_fs_data(lists, all_series=all_series)
+    │              │                 └ False
+    │              └ ['BAMLH0A0HYM2EY', 'BAMLC0A4CBBBEY', 'DGS10', 'PAYEMS', 'PPIACO', 'T10Y3M', 'T10Y2T', 'T30Y10', 'DGS10', 'DGS2']
+    └ <function update_fs_data at 0x0000027B29144EE0>
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\DataManager\Macro\Fred\fred_stlouisfed_org_api.py", line 61, in update_fs_data
+    info = get_fs_info(_code)
+           │           └ 'T10Y2T'
+           └ <function get_fs_info at 0x0000027B2914A9D0>
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlManger\DataManager\Macro\Fred\fred_stlouisfed_org_api.py", line 33, in get_fs_info
+    info = fred.get_series_info(code)
+           │    │               └ 'T10Y2T'
+           │    └ <function Fred.get_series_info at 0x0000027B279EF790>
+           └ <fredapi.fred.Fred object at 0x0000027B77601280>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fredapi\fred.py", line 95, in get_series_info
+    root = self.__fetch_data(url)
+           │                 └ 'https://api.stlouisfed.org/fred/series?series_id=T10Y2T'
+           └ <fredapi.fred.Fred object at 0x0000027B77601280>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\fredapi\fred.py", line 68, in __fetch_data
+    raise ValueError(root.get('message'))
+                     │    └ <method 'get' of 'xml.etree.ElementTree.Element' objects>
+                     └ <Element 'error' at 0x0000027B2922DB80>
+
+ValueError: Bad Request.  The series does not exist.
+2023-11-21 14:36:56.990 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting T10Y3M into <Model: table_macro_fs_data>
+2023-11-21 14:36:59.663 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting T10Y2Y into <Model: table_macro_fs_data>
+2023-11-21 14:37:00.202 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:63 - Inserting T10YFF into <Model: table_macro_fs_info>
+2023-11-21 14:37:03.705 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting T10YFF into <Model: table_macro_fs_data>
+2023-11-21 14:37:04.215 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:63 - Inserting T1YFF into <Model: table_macro_fs_info>
+2023-11-21 14:37:07.747 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting T1YFF into <Model: table_macro_fs_data>
+2023-11-21 14:37:08.269 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:63 - Inserting TB3SMFFM into <Model: table_macro_fs_info>
+2023-11-21 14:37:09.041 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting TB3SMFFM into <Model: table_macro_fs_data>
+2023-11-21 14:37:12.168 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS10 into <Model: table_macro_fs_data>
+2023-11-21 14:37:14.785 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS2 into <Model: table_macro_fs_data>
+2023-11-21 14:37:17.489 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS30 into <Model: table_macro_fs_data>
+2023-11-21 14:37:20.718 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS5 into <Model: table_macro_fs_data>
+2023-11-21 14:37:23.152 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS3MO into <Model: table_macro_fs_data>
+2023-11-21 14:37:24.820 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS1MO into <Model: table_macro_fs_data>
+2023-11-21 14:37:25.367 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:63 - Inserting DGS20 into <Model: table_macro_fs_info>
+2023-11-21 14:37:28.953 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS20 into <Model: table_macro_fs_data>
+2023-11-21 14:37:29.489 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:63 - Inserting DGS7 into <Model: table_macro_fs_info>
+2023-11-21 14:37:32.365 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS7 into <Model: table_macro_fs_data>
+2023-11-21 14:37:32.956 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:63 - Inserting DGS1 into <Model: table_macro_fs_info>
+2023-11-21 14:37:36.497 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS1 into <Model: table_macro_fs_data>
+2023-11-21 14:37:37.122 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:63 - Inserting DGS6MO into <Model: table_macro_fs_info>
+2023-11-21 14:37:39.663 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS6MO into <Model: table_macro_fs_data>
+2023-11-21 14:37:40.228 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:63 - Inserting DGS3 into <Model: table_macro_fs_info>
+2023-11-21 14:37:44.292 | SUCCESS  | DataManager.Macro.Fred.fred_stlouisfed_org_api:update_fs_data:70 - Inserting DGS3 into <Model: table_macro_fs_data>

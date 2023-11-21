@@ -1,0 +1,24 @@
+2023-11-21 13:48:33.697 | INFO     | DataManager.CFTC.update:update:46 - 处理dea_fut_xls_2023.zip
+2023-11-21 13:48:33.697 | INFO     | DataManager.CFTC.update:update:47 - 下载更新文件D:\CFTC\Future\Report\data\update.zip
+2023-11-21 13:48:33.697 | INFO     | DataManager.CFTC.update:update:48 - 对比原始文件D:\CFTC\Future\Report\data\dea_fut_xls_2023.zip
+2023-11-21 13:48:33.963 | INFO     | DataManager.CFTC.update:update:52 - D:\CFTC\Future\Report\data\update.zip, D:\CFTC\Future\Report\data\dea_fut_xls_2023.zip, '文件相同'
+2023-11-21 13:48:41.187 | INFO     | DataManager.CFTC.update:update:46 - 处理fut_fin_xls_2023.zip
+2023-11-21 13:48:41.188 | INFO     | DataManager.CFTC.update:update:47 - 下载更新文件D:\CFTC\Future\Traders\data\update.zip
+2023-11-21 13:48:41.188 | INFO     | DataManager.CFTC.update:update:48 - 对比原始文件D:\CFTC\Future\Traders\data\fut_fin_xls_2023.zip
+2023-11-21 13:48:41.220 | INFO     | DataManager.CFTC.update:update:52 - D:\CFTC\Future\Traders\data\update.zip, D:\CFTC\Future\Traders\data\fut_fin_xls_2023.zip, '文件相同'
+2023-11-21 13:48:50.374 | INFO     | DataManager.CFTC.update:update:46 - 处理fut_disagg_xls_2023.zip
+2023-11-21 13:48:50.376 | INFO     | DataManager.CFTC.update:update:47 - 下载更新文件D:\CFTC\Future\Disagg\data\update.zip
+2023-11-21 13:48:50.376 | INFO     | DataManager.CFTC.update:update:48 - 对比原始文件D:\CFTC\Future\Disagg\data\fut_disagg_xls_2023.zip
+2023-11-21 13:48:50.667 | INFO     | DataManager.CFTC.update:update:52 - D:\CFTC\Future\Disagg\data\update.zip, D:\CFTC\Future\Disagg\data\fut_disagg_xls_2023.zip, '文件相同'
+2023-11-21 13:48:59.484 | INFO     | DataManager.CFTC.update:update:46 - 处理dea_com_xls_2023.zip
+2023-11-21 13:48:59.484 | INFO     | DataManager.CFTC.update:update:47 - 下载更新文件D:\CFTC\FutureOptions\Report\data\update.zip
+2023-11-21 13:48:59.484 | INFO     | DataManager.CFTC.update:update:48 - 对比原始文件D:\CFTC\FutureOptions\Report\data\dea_com_xls_2023.zip
+2023-11-21 13:48:59.731 | INFO     | DataManager.CFTC.update:update:52 - D:\CFTC\FutureOptions\Report\data\update.zip, D:\CFTC\FutureOptions\Report\data\dea_com_xls_2023.zip, '文件相同'
+2023-11-21 13:49:06.240 | INFO     | DataManager.CFTC.update:update:46 - 处理com_fin_xls_2023.zip
+2023-11-21 13:49:06.240 | INFO     | DataManager.CFTC.update:update:47 - 下载更新文件D:\CFTC\FutureOptions\Traders\data\update.zip
+2023-11-21 13:49:06.240 | INFO     | DataManager.CFTC.update:update:48 - 对比原始文件D:\CFTC\FutureOptions\Traders\data\com_fin_xls_2023.zip
+2023-11-21 13:49:06.275 | INFO     | DataManager.CFTC.update:update:52 - D:\CFTC\FutureOptions\Traders\data\update.zip, D:\CFTC\FutureOptions\Traders\data\com_fin_xls_2023.zip, '文件相同'
+2023-11-21 13:49:15.414 | INFO     | DataManager.CFTC.update:update:46 - 处理com_disagg_xls_2023.zip
+2023-11-21 13:49:15.414 | INFO     | DataManager.CFTC.update:update:47 - 下载更新文件D:\CFTC\FutureOptions\Disagg\data\update.zip
+2023-11-21 13:49:15.414 | INFO     | DataManager.CFTC.update:update:48 - 对比原始文件D:\CFTC\FutureOptions\Disagg\data\com_disagg_xls_2023.zip
+2023-11-21 13:49:15.717 | INFO     | DataManager.CFTC.update:update:52 - D:\CFTC\FutureOptions\Disagg\data\update.zip, D:\CFTC\FutureOptions\Disagg\data\com_disagg_xls_2023.zip, '文件相同'

@@ -1,0 +1,35 @@
+# 主要配置
+db:
+    host: "localhost"           # 主机地址
+    port: 3306                  # 端口
+    user: root                  # 用户名
+    password: "123456"          # 密码
+    charset: ""                 # 字符格式
+
+
+    main_db: "ks_test"            # 主数据名称
+    view_db: "ks_factor"          # 视图数据库（对外）
+    member_db:
+        tmq: "ks_tmq"          # 田孟奇数据库
+
+log:
+    dir_path: null   #日志文件
+    log_name: null               # 日志名称
+    rotation: "10MB"             #
+
+data:
+    Macro:
+        Wind:
+            wind_xlsx_path: "Macro/Wind/wind_single_table"
+            wind_id_path: "Macro/Wind/wind_id"
+        Fred:
+            fred_id_path: "Macro/Fred/fred_id"
+        MM:
+            mm_path: "Macro/MM"
+    CFTC:
+        database: "CFTC"
+
+    Wind_Table:
+        global_index_path: "Wind_table/global_index"
+        individual_path: "Wind_table/individual_table"
+        option_path: "Wind_table/option"

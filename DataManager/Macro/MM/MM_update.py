@@ -358,6 +358,7 @@ def insert_mm_data(title_list=None):
         for i in df.columns:
             data = df[i].reset_index().dropna(subset='value')
             data['stat_id'] = i
+            data['stat_id_first_digit'] = i[0]
             data.rename(columns={i: 'value'}, inplace=True)
             insert_data2table(MacroMMdata, data, conflict='replace')
 

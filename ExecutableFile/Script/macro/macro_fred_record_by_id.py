@@ -12,7 +12,7 @@ sys.path.append(main_path)
 from DataManager.Macro.Fred.fred_stlouisfed_org_api import update_fs_data
 from ExecutableFile.Config.config import config_logger, config
 
-wind_fred_id = config('data', 'Macro', 'Fred', 'fred_id_path')
+fred_fred_id = config('data', 'Macro', 'Fred', 'fred_id_path')
 
 
 def split_list(lst, chunk_size=10):
@@ -29,7 +29,7 @@ def main(code_list=None, all_series=False):
 
 
 if __name__ == '__main__':
-    log_dir = wind_fred_id
+    log_dir = fred_fred_id
     # print(log_dir)
     logger = config_logger(dirs=log_dir, file_name='fred_update')
     fire.Fire(main)

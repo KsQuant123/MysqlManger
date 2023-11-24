@@ -163,3 +163,200 @@ Traceback (most recent call last):
           └ <class 'json.decoder.JSONDecodeError'>
 
 json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+2023-11-23 17:27:56.995 | INFO     | DataManager.Macro.MM.MM_update:insert_mm_data:380 - update_idx_list:['1025']
+2023-11-23 17:28:05.296 | SUCCESS  | DataManager.Macro.MM.MM_update:insert_mm_data:390 - success to load idx_1025, including: [739, 485]
+2023-11-23 17:33:36.971 | INFO     | DataManager.Macro.MM.MM_update:insert_mm_data:380 - update_idx_list:[]
+2023-11-23 17:35:00.759 | INFO     | DataManager.Macro.MM.MM_update:insert_mm_data:380 - update_idx_list:['63570']
+2023-11-23 17:35:11.505 | ERROR    | __main__:<module>:29 - An error has been caught in function '<module>', process 'MainProcess' (4208), thread 'MainThread' (11684):
+Traceback (most recent call last):
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpcore\_exceptions.py", line 8, in map_exceptions
+    yield
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpcore\backends\sync.py", line 57, in start_tls
+    raise exc
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpcore\backends\sync.py", line 52, in start_tls
+    sock = ssl_context.wrap_socket(
+           │           └ <function SSLContext.wrap_socket at 0x0000026C4B1F54C0>
+           └ <ssl.SSLContext object at 0x0000026C4E7CEE40>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+           │    │               └ <classmethod object at 0x0000026C4B1F73D0>
+           │    └ <class 'ssl.SSLSocket'>
+           └ <ssl.SSLContext object at 0x0000026C4E7CEE40>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+    │    └ <function SSLSocket.do_handshake at 0x0000026C4B1FC3A0>
+    └ <ssl.SSLSocket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+    │    └ None
+    └ <ssl.SSLSocket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1131)
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpx\_transports\default.py", line 218, in handle_request
+    resp = self._pool.handle_request(req)
+           │    │     │              └ <Request [b'GET']>
+           │    │     └ <function ConnectionPool.handle_request at 0x0000026C4B92A9D0>
+           │    └ <httpcore.ConnectionPool object at 0x0000026C4E8354C0>
+           └ <httpx.HTTPTransport object at 0x0000026C4E8353D0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpcore\_sync\connection_pool.py", line 253, in handle_request
+    raise exc
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpcore\_sync\connection_pool.py", line 237, in handle_request
+    response = connection.handle_request(request)
+               │          │              └ <Request [b'GET']>
+               │          └ <function HTTPConnection.handle_request at 0x0000026C4B929CA0>
+               └ <HTTPConnection [CONNECTION FAILED]>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpcore\_sync\connection.py", line 86, in handle_request
+    raise exc
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpcore\_sync\connection.py", line 63, in handle_request
+    stream = self._connect(request)
+             │    │        └ <Request [b'GET']>
+             │    └ <function HTTPConnection._connect at 0x0000026C4B929D30>
+             └ <HTTPConnection [CONNECTION FAILED]>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpcore\_sync\connection.py", line 150, in _connect
+    stream = stream.start_tls(**kwargs)
+             │      │           └ {'ssl_context': <ssl.SSLContext object at 0x0000026C4E7CEE40>, 'server_hostname': 'sc.macromicro.me', 'timeout': 5.0}
+             │      └ <function SyncStream.start_tls at 0x0000026C4B8FA550>
+             └ <httpcore.backends.sync.SyncStream object at 0x0000026C4E835EB0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpcore\backends\sync.py", line 57, in start_tls
+    raise exc
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x0000026C4FBB5500>
+    │    │   │     │     └ SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)')
+    │    │   │     └ <class 'ssl.SSLEOFError'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x0000026C4FA5C2E0>
+    └ <contextlib._GeneratorContextManager object at 0x0000026C4E835EE0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpcore\_exceptions.py", line 12, in map_exceptions
+    raise to_exc(exc)
+          └ <class 'httpcore.ConnectError'>
+
+httpcore.ConnectError: EOF occurred in violation of protocol (_ssl.c:1131)
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+> File "C:/Users/yuping.zhao/Desktop/量化实验室产品/数据/MysqlMangerSever/ExecutableFile/Script/macro/macro_mm_update_by_table_id.py", line 29, in <module>
+    main(idx_list=['63570'])
+    └ <function main at 0x0000026C4BAABAF0>
+
+  File "C:/Users/yuping.zhao/Desktop/量化实验室产品/数据/MysqlMangerSever/ExecutableFile/Script/macro/macro_mm_update_by_table_id.py", line 23, in main
+    insert_mm_data(title_list=title_list, idx_list=idx_list, auth=auth, cookie=cookie)
+    │                         │                    │              │            └ '_ga_4CS94JJY2M=GS1.1.1700731634.51.1.1700731649.0.0.0; _ga=GA1.2.608335812.1683335932; _hjSessionUser_1543609=eyJpZCI6ImJmYm...
+    │                         │                    │              └ '6edcb54fbd18785149687d1c7c64007c'
+    │                         │                    └ ['63570']
+    │                         └ None
+    └ <function insert_mm_data at 0x0000026C4E77A310>
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlMangerSever\DataManager\Macro\MM\MM_update.py", line 383, in insert_mm_data
+    info_ = get_m2_info(str(idx), Authorization_value=auth, Cookie=cookie)
+            │               │                         │            └ '_ga_4CS94JJY2M=GS1.1.1700731634.51.1.1700731649.0.0.0; _ga=GA1.2.608335812.1683335932; _hjSessionUser_1543609=eyJpZCI6ImJmYm...
+            │               │                         └ '6edcb54fbd18785149687d1c7c64007c'
+            │               └ '63570'
+            └ <function get_m2_info at 0x0000026C4E77A0D0>
+
+  File "C:\Users\yuping.zhao\Desktop\量化实验室产品\数据\MysqlMangerSever\DataManager\Macro\MM\MM_update.py", line 267, in get_m2_info
+    res = requests.get(url, headers=header)
+          │        │   │            └ {'Accept': 'application/json, text/javascript, */*; q=0.01', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-C...
+          │        │   └ 'https://sc.macromicro.me/charts/data/63570'
+          │        └ <function get at 0x0000026C4B96EB80>
+          └ <module 'httpx' from 'C:\\Users\\yuping.zhao\\Anaconda3\\envs\\db\\lib\\site-packages\\httpx\\__init__.py'>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpx\_api.py", line 189, in get
+    return request(
+           └ <function request at 0x0000026C4B430EE0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpx\_api.py", line 100, in request
+    return client.request(
+           │      └ <function Client.request at 0x0000026C4B968550>
+           └ <httpx.Client object at 0x0000026C4E82BD90>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpx\_client.py", line 815, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           │    │    │             │                      └ False
+           │    │    │             └ None
+           │    │    └ <Request('GET', 'https://sc.macromicro.me/charts/data/63570')>
+           │    └ <function Client.send at 0x0000026C4B968700>
+           └ <httpx.Client object at 0x0000026C4E82BD90>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpx\_client.py", line 902, in send
+    response = self._send_handling_auth(
+               │    └ <function Client._send_handling_auth at 0x0000026C4B968790>
+               └ <httpx.Client object at 0x0000026C4E82BD90>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpx\_client.py", line 930, in _send_handling_auth
+    response = self._send_handling_redirects(
+               │    └ <function Client._send_handling_redirects at 0x0000026C4B968820>
+               └ <httpx.Client object at 0x0000026C4E82BD90>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpx\_client.py", line 967, in _send_handling_redirects
+    response = self._send_single_request(request)
+               │    │                    └ <Request('GET', 'https://sc.macromicro.me/charts/data/63570')>
+               │    └ <function Client._send_single_request at 0x0000026C4B9688B0>
+               └ <httpx.Client object at 0x0000026C4E82BD90>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpx\_client.py", line 1003, in _send_single_request
+    response = transport.handle_request(request)
+               │         │              └ <Request('GET', 'https://sc.macromicro.me/charts/data/63570')>
+               │         └ <function HTTPTransport.handle_request at 0x0000026C4B95C4C0>
+               └ <httpx.HTTPTransport object at 0x0000026C4E8353D0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpx\_transports\default.py", line 218, in handle_request
+    resp = self._pool.handle_request(req)
+           │    │     │              └ <Request [b'GET']>
+           │    │     └ <function ConnectionPool.handle_request at 0x0000026C4B92A9D0>
+           │    └ <httpcore.ConnectionPool object at 0x0000026C4E8354C0>
+           └ <httpx.HTTPTransport object at 0x0000026C4E8353D0>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x0000026C4E82E800>
+    │    │   │     │     └ ConnectError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1131)'))
+    │    │   │     └ <class 'httpcore.ConnectError'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_httpcore_exceptions at 0x0000026C4FA5C430>
+    └ <contextlib._GeneratorContextManager object at 0x0000026C4E835790>
+
+  File "C:\Users\yuping.zhao\Anaconda3\envs\db\lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+          │          └ 'EOF occurred in violation of protocol (_ssl.c:1131)'
+          └ <class 'httpx.ConnectError'>
+
+httpx.ConnectError: EOF occurred in violation of protocol (_ssl.c:1131)
+2023-11-23 17:37:06.482 | INFO     | DataManager.Macro.MM.MM_update:insert_mm_data:380 - update_idx_list:['63570']
+2023-11-23 17:37:14.827 | SUCCESS  | DataManager.Macro.MM.MM_update:insert_mm_data:390 - success to load idx_63570, including: [4, 26926]
+2023-11-24 10:43:54.038 | INFO     | DataManager.Macro.MM.MM_update:insert_mm_data:380 - update_idx_list:['897']
+2023-11-24 10:44:02.407 | SUCCESS  | DataManager.Macro.MM.MM_update:insert_mm_data:390 - success to load idx_897, including: [485]
+2023-11-24 10:57:12.929 | INFO     | DataManager.Macro.MM.MM_update:insert_mm_data:380 - update_idx_list:['897']
+2023-11-24 10:57:21.429 | SUCCESS  | DataManager.Macro.MM.MM_update:insert_mm_data:390 - success to load idx_897, including: [485]
+2023-11-24 11:01:30.082 | INFO     | DataManager.Macro.MM.MM_update:insert_mm_data:380 - update_idx_list:['897']
+2023-11-24 11:01:38.605 | SUCCESS  | DataManager.Macro.MM.MM_update:insert_mm_data:390 - success to load idx_897, including: [485]
+2023-11-24 11:07:36.266 | INFO     | DataManager.Macro.MM.MM_update:insert_mm_data:381 - update_idx_list:['897']
+2023-11-24 11:07:44.558 | WARNING  | DataManager.Macro.MM.MM_update:insert_mm_data:387 - failed to load idx_897

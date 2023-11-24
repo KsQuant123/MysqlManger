@@ -21,7 +21,7 @@ def main(year=current_year_us):
 
 
 if __name__ == '__main__':
-    CFTC_Database_path = config('data', 'CFTC', 'database')
+    CFTC_Database_path = config('data', 'CFTC', 'cftc_path')
     # 配置日志
     logger = config_logger(dirs=CFTC_Database_path, file_name='cftc_update')
 

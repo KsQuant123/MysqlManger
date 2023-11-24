@@ -127,6 +127,14 @@ def get_data_by_code(table, code, column):
         return pd.DataFrame(list(query.dicts()))
 
 
+def get_data_by_columns(table, **kwargs):
+    query = table.select()
+    for k, v in kwargs.items():
+        query = query.where(getattr(table, k) == v)
+
+    return pd.DataFrame(list(query.dicts()))
+
+
 def get_latest_date(table, date_name='date', op_time=True):
     if not table.table_exists():
         print(f"Table '{table._meta.database.database}.{table._meta.table_name}' doesn't exist")
@@ -162,12 +170,26 @@ def update_data(table, data):
     total.drop_duplicates(
         subset=data.columns,
         keep=False
-    ).query("op_time=='NaT'")#.to_csv('test.csv')
+    ).query("op_time=='NaT'")  # .to_csv('test.csv')
     return result
 
 
-def insert_dict2table(table, dict_term):
-    pass
+def insert_dict2table(table, dict_term, conflict, comment=None, silence=False):
+    database = table._meta.database
+    if conflict == 'replace':
+        with database.atomic():
+            for c in chunked(dict_term, 50):
+                table.insert_many(
+                    c).on_conflict_replace().execute()
+    elif conflict == 'ignore':
+        with database.atomic():
+            for c in chunked(dict_term, 50):
+                table.insert_many(
+                    c).on_conflict_ignore().execute()
+    if not silence:
+        print(dict_term)
+    if comment is not None:
+        insert_table_comment(table, comment)
 
 
 def insert_data2table(table, data, conflict, comment=None, silence=False):

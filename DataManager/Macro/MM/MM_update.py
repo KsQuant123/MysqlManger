@@ -339,28 +339,29 @@ def parse_m2_data(info, idx):
     return data, info
 
 
-def insert_mm_data(title_list=None):
-    table_info = get_table(MacroMMInfo)
-    print(table_info)
-    if title_list is not None:
-        table_info = table_info[table_info['title'].isin(title_list)]
-    idx_list = table_info['id'].unique()
-    print(idx_list)
-    for idx in tqdm(idx_list):
-        print(idx)
-        info_ = get_m2_info(str(idx))
-        time.sleep(1)
-        if not info_['success']:
-            print(f"failed to load {idx}")
-            continue
-        df, info = parse_m2_data(info_, idx)
-        insert_data2table(MacroMMDetail, info, conflict='ignore')
-        for i in df.columns:
-            data = df[i].reset_index().dropna(subset='value')
-            data['stat_id'] = i
-            data['stat_id_first_digit'] = i[0]
-            data.rename(columns={i: 'value'}, inplace=True)
-            insert_data2table(MacroMMdata, data, conflict='replace')
+# def insert_mm_data(title_list=None):
+#     table_info = get_table(MacroMMInfo)
+#     print(table_info)
+#     if title_list is not None:
+#         table_info = table_info[table_info['title'].isin(title_list)]
+#     idx_list = table_info['id'].unique()
+#     print(idx_list)
+#     for idx in tqdm(idx_list):
+#         print(idx)
+#         info_ = get_m2_info(str(idx))
+#         time.sleep(1)
+#         if not info_['success']:
+#             print(f"failed to load {idx}")
+#             continue
+#         df, info = parse_m2_data(info_, idx)
+#         insert_data2table(MacroMMDetail, info, conflict='ignore')
+#         for i in df.columns:
+#             data = df[i].reset_index().dropna(subset='value')
+#             data['stat_id'] = i
+#             data['stat_id_first_digit'] = int(i[0])
+#             data.rename(columns={i: 'value'}, inplace=True)
+#             print(data)
+#             insert_data2table(MacroMMdata, data, conflict='replace')
 
 
 def insert_mm_data(title_list=None, idx_list=None, auth=None, cookie=None):
@@ -393,6 +394,7 @@ def insert_mm_data(title_list=None, idx_list=None, auth=None, cookie=None):
                 download_list.append(i)
                 data = df[i].reset_index().dropna(subset=i)
                 data['stat_id'] = i
+                data['stat_id_first_digit'] = int(i[0])
                 data.rename(columns={i: 'value'}, inplace=True)
                 insert_data2table(MacroMMdata, data, conflict='update')
 

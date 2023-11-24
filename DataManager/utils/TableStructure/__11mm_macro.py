@@ -1,7 +1,7 @@
 from peewee import *
 from datetime import datetime
-# from ..mysql_peewee import connect_mysql, dict2str, handle_table
-from DataManager.utils.mysql_peewee import connect_mysql, dict2str, handle_table
+from ..mysql_peewee import connect_mysql, dict2str, handle_table
+# from DataManager.utils.mysql_peewee import connect_mysql, dict2str, handle_table
 # from DataManager.Script.mysql_peewee import connect_mysql, dict2str, handle_table
 #
 # 当前时间
@@ -40,7 +40,7 @@ class MacroMMInfo(Model):
     op_time = DateTimeField(column_name="op_time", default=datetime.now, help_text='操作时间')
 
     class Meta:
-        primary_key = CompositeKey('title', 'name')
+        primary_key = CompositeKey('title', 'id')
         table_name = 'macro_mm_info'
         database = mysql_db
         info = {'描述': 'MM平方财经分类表', }
@@ -83,10 +83,11 @@ class MacroMMdata(Model):
     date = DateField(column_name='date', null=True, help_text='日期')
     stat_id = CharField(column_name='stat_id', null=False, help_text='数据id')
     value = CharField(column_name='value', null=True, help_text='数值')
+    stat_id_first_digit = IntegerField(column_name='stat_id_first_digit', null=False, help_text='id首位数字')
     op_time = DateTimeField(column_name="op_time", default=datetime.now, help_text='操作时间')
 
     class Meta:
-        primary_key = CompositeKey('date', 'stat_id')
+        primary_key = CompositeKey('date', 'stat_id', 'stat_id_first_digit')
         table_name = 'macro_mm_data'
         database = mysql_db
         info = {'描述': 'MM平方财经数据', }

@@ -24,6 +24,6 @@ def main(title_list=None, idx_list=None):
 
 
 if __name__ == '__main__':
-    fire.Fire(main)
+    # fire.Fire(main)
     logger = config_logger(dirs=mm_path, file_name='mm_update')
-
+    main(idx_list=['897'])

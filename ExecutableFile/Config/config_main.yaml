@@ -27,7 +27,10 @@ data:
         MM:
             mm_path: "Macro/MM"
     CFTC:
-        database: "CFTC"
+        cftc_path: "CFTC"
+
+    Indicator:
+        indicator_path: "Indicators"
 
     Wind_Table:
         global_index_path: "Wind_table/global_index"
